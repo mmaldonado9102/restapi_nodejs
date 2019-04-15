@@ -91,7 +91,7 @@ exports.peripheraldevice_update = function (req, res) {
         return;
     }
 
-    PeripheralDevice.findByIdAndUpdate(req.params.id, { $set: req.body }, function (err, peripheraldevice) { //findOneandUpdate
+    PeripheralDevice.findByIdAndUpdate(req.params.id, { $set: req.body }, function (err, peripheraldevice) { 
         if (err) return next(err);
         res.send('PeripheralDevice udpated.');
     });

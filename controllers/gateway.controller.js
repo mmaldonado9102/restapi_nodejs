@@ -48,22 +48,6 @@ exports.gateway_create = function (req, res) {
 
 exports.gateway_details = function (req, res) {
 
-
-    // Gateway.findById(req.params.id).aggregate([
-    //     {
-    //         "$lookup": {
-    //             "from": "peripheraldevices",
-    //             "localField": "_id",
-    //             "foreignField": "gateway_id",
-    //             "as": "peripheraldevices"
-    //         }
-    //     },
-    // ]).exec(function (err, results) {
-    //     if (err)
-    //         res.send(err);
-    //     res.json(results);
-    // })
-
     Gateway.findById(req.params.id, function (err, gateway) {
         if (err) return next(err);
         res.send(gateway);
