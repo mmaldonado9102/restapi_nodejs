@@ -1,4 +1,4 @@
-const Gateway = require('../models/gateway.model');
+const Gateway = require('../models/gateway.model'); 
 
 exports.gateway_list = function (req, res) {
     Gateway.aggregate([
